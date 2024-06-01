@@ -1,133 +1,107 @@
-.back{
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: azure;
-}
-.bg {
-    flex: 1;
-    flex-shrink: 0;
-    height: 0;
-    width: 100%;
-    position: relative;
-   
-}
-
-.bg2{
-    width: 100%;
-    height: 100%;
-    overflow:auto;
-    align-items: flex-start
-    position: absolute;
-    Text-align:center
-}
-
-p{
-    font-size: 40px;
-    Text-align: left
-}
-h1{
-    font-size: 60px;
-}
-
-body {
-    margin: 0px;
-    position: fixed;
-   
-}
-
-* {
-  box-sizing: border-box;
-}
-
-ul {
-  list-style: none; 
-  padding-left: 0; 
-}
-
-a {
-  text-decoration: none;
-}
-
-/* NavBar */
-nav {
-  background: #eee;
-  box-shadow: 0px 1px 3px #00000088;
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
-
-/* 隱藏 checkbox */
-input {
-  display: none;
-}
-
-/* 漢堡按鈕 */
-label {
-  float: left;
-  padding-left: 50px;
-  line-height: 50px;
-  cursor: pointer;
-}
-
-.img2{
-    width: 30px;   
-    vertical-align: middle;
-}
-
-/* menu*/
-.menu {
-  clear: both;
-  background: #fff;
-}
-
-li {
-    text-align: center;
-    border-bottom: 1px solid #efefef;
-}
-
-a {
-    display: block;
-    line-height: 50px;
-    font-size: 18px;
-    color: #5d5d5d;
-    &:hover {
-        background: #5d5d5d;
-        color: #fff;
-    }
-}
-
-/* 下拉選單效果 */
-.menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: .2s; /* 動畫秒數 */
-}
-
-input:checked ~ .menu {
-  max-height: 300px;
-}
-
-/* mediaquery */
-@media screen and (min-width: 600px) {
-  label {
-    display: none;
-  }
-  .menu {
-    float: left;
-    clear: none;
-    max-height: 50px;
-    background: #eee;
-    li {
-      display: inline-block;
-      a {
-        padding: 0 15px;  
-      }
-    }
-  }
-}
+.container {
+                display: grid;
+                width: 100%;
+                height: 100%;
+                grid-template-areas:
+                "header header header"
+                "left main right"
+                "footer footer footer";
+                grid-template-columns: 15vw 70vw 15vw;
+                grid-template-rows: auto 180vh 30vh;
+            }
+            .header {
+                grid-area: header;
+            }
+            .header *{
+                padding: 0;
+                margin: 0;  
+            }
+            ul.menu{
+                list-style: none;
+                background-color: #333;
+                text-align: left;
+            }
+            ul.menu li{
+                display: inline-block;
+                position: relative;
+            }
+            ul.menu li a{
+                display: block;
+                padding: 20px 25px;
+                font-size: 16px;
+                color: #FFF;
+                text-decoration: none;
+                text-align: center;
+            }
+            ul.menu li ul.dropdown li{
+                display: block;
+                background-color: #333;
+                margin: 2px 0px;
+            }
+            ul.menu li ul.dropdown{
+                width: auto;
+                position: absolute;
+                background-color: #FFF;
+                z-index: 999;
+                display: none;
+            }
+            ul.menu li a:hover{
+                background-color: #222
+            }
+            ul.menu li:hover ul.dropdown{
+                display: block;
+            }
+            .left {
+                grid-area: left;
+            }
+            .main {
+                grid-area: main;
+            }
+            hr{
+                font-size: 36px;
+                padding: 0 20px;
+            }
+            .text{
+                width: 720px;
+                margin: 5px;
+                display: inline-block;
+                font-size: 18px;
+            }
+            p{
+                text-align: justify;
+            }
+            .img{
+                display: inline-block;
+            }
+            img{
+                width: 300px;
+                height: 200px;
+            }
+            .right {
+                grid-area: right;
+            }
+            .footer {
+                grid-area: footer;
+                background-color: #333;
+                position: relative;
+            }
+            p.text-end{
+                text-align: center;
+                font-size: 18px;
+                color: #fff;
+                font-weight: bold;
+                position: relative;
+                top: 30px;
+            }
+            p.Contact{
+                font-size: 18px;
+                color: #fff;
+                font-weight: bold;
+                position: relative;
+                text-align: center;
+                top:50px;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
