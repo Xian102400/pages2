@@ -7,7 +7,7 @@
                 "left main right"
                 "footer footer footer";
                 grid-template-columns: 15vw 70vw 15vw;
-                grid-template-rows: auto 180vh 30vh;
+                grid-template-rows: auto auto 30vh;
             }
             .header {
                 grid-area: header;
@@ -62,7 +62,9 @@
                 padding: 0 20px;
             }
             .text{
-                width: 720px;
+                border: 1 solid #333; 
+                height: 200px;
+                width: 40vw;
                 margin: 5px;
                 display: inline-block;
                 font-size: 18px;
@@ -74,6 +76,7 @@
                 display: inline-block;
             }
             img{
+                width: 30vw;
                 width: 300px;
                 height: 200px;
             }
@@ -81,6 +84,7 @@
                 grid-area: right;
             }
             .footer {
+                
                 grid-area: footer;
                 background-color: #333;
                 position: relative;
